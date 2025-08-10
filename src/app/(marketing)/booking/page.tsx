@@ -85,8 +85,11 @@ export default function BookingPage() {
           <label className="text-sm">Notes</label>
           <textarea rows={4} className="mt-1 w-full rounded-md border bg-background px-3 py-2" {...register('notes')} />
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Submitting…' : 'Submit booking'}</Button>
+          <Button asChild variant="outline">
+            <a href="/checkout">Proceed to payment</a>
+          </Button>
           {submitted && <span className="text-sm text-green-600">We received your request. We’ll reply shortly.</span>}
         </div>
       </form>
