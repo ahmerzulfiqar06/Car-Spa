@@ -118,7 +118,7 @@ export function TestimonialsSection() {
                         </div>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-4">"{testimonial.text}"</p>
+                    <p className="text-muted-foreground mb-4">&ldquo;{testimonial.text}&rdquo;</p>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-medium">
                       {testimonial.service}
                     </div>

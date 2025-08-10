@@ -158,7 +158,7 @@ export default function BookingPage() {
           </div>
           <h1 className="text-3xl font-bold mb-2">Booking Confirmed!</h1>
           <p className="text-muted-foreground mb-6">
-            We've sent a confirmation email with all the details.
+            We&apos;ve sent a confirmation email with all the details.
           </p>
           <Button asChild>
             <a href="/">Return Home</a>
@@ -181,7 +181,7 @@ export default function BookingPage() {
             Book Your Service
           </h1>
           <p className="text-lg text-muted-foreground">
-            Select your service, pick a date and time, and we'll take care of the rest.
+            Select your service, pick a date and time, and we&apos;ll take care of the rest.
           </p>
         </motion.div>
 
