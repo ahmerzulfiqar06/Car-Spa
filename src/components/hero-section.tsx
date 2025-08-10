@@ -7,7 +7,7 @@ import { Sparkles, Shield, Clock, Award } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <div className="absolute inset-0 opacity-30" style={{
@@ -47,20 +47,20 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
           >
-            Your Car Deserves
-            <span className="block gradient-text">The Royal Treatment</span>
+            <span className="block">Precision Detailing</span>
+            <span className="block gradient-text">Extraordinary Results</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-6 text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0"
+            className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Experience the ultimate in automotive detailing with our premium services. 
-            From ceramic coating to paint correction, we make your car shine like new.
+            Experience automotive perfection with our award-winning detailing services. 
+            From precision paint correction to premium ceramic protection, we deliver results that exceed expectations.
           </motion.p>
 
           <motion.div

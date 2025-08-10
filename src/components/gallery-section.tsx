@@ -39,12 +39,12 @@ const galleryItems = [
 ]
 
 const showcaseImages = [
-  'https://images.unsplash.com/photo-1632245889029-e406faaa34cd?w=800&q=80',
-  'https://images.unsplash.com/photo-1618843479619-f3d0d81e4d10?w=800&q=80',
-  'https://images.unsplash.com/photo-1601929862217-f1bf94503333?w=800&q=80',
-  'https://images.unsplash.com/photo-1625231334168-35067f8853ed?w=800&q=80',
-  'https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=800&q=80',
-  'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80'
+  'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80',
+  'https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=800&q=80',
+  'https://images.unsplash.com/photo-1580414922060-b8b8dc4b7ad2?w=800&q=80',
+  'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80',
+  'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80',
+  'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80'
 ]
 
 export function GallerySection() {
