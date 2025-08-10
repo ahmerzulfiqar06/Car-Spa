@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "typescript": "^5.5.3",
-    "eslint": "^8.57.0",
+    "eslint": "8.57.0",
     "eslint-config-next": "^14.2.4",
     "postcss": "^8.4.41",
     "autoprefixer": "^10.4.20",
@@ -49,6 +49,9 @@
     "@types/mapbox-gl": "^2.7.21",
     "@cloudflare/next-on-pages": "^1.11.4",
     "wrangler": "^3.60.3"
+  },
+  "overrides": {
+    "eslint": "8.57.0"
   }
 }
 
