@@ -1,32 +1,48 @@
 import { NextResponse } from 'next/server'
-import paypal from '@paypal/checkout-server-sdk'
 
-function client() {
+export const runtime = 'edge'
+
+async function getAccessToken() {
   const clientId = process.env.PAYPAL_CLIENT_ID
   const clientSecret = process.env.PAYPAL_CLIENT_SECRET
   if (!clientId || !clientSecret) return null
-  const env = process.env.NODE_ENV === 'production'
-    ? new paypal.core.LiveEnvironment(clientId, clientSecret)
-    : new paypal.core.SandboxEnvironment(clientId, clientSecret)
-  return new paypal.core.PayPalHttpClient(env)
+  const base = process.env.NODE_ENV === 'production' ? 'https://api.paypal.com' : 'https://api-m.sandbox.paypal.com'
+  const res = await fetch(base + '/v1/oauth2/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: 'grant_type=client_credentials',
+    // @ts-ignore
+    cf: { cacheTtl: 0 },
+  }, {
+    // @ts-ignore: next edge runtime fetch init
+    headers: { Authorization: 'Basic ' + Buffer.from(`${clientId}:${clientSecret}`).toString('base64') },
+  } as any)
+  if (!res.ok) return null
+  const json = await res.json()
+  return json.access_token as string
 }
 
 export async function POST(req: Request) {
-  const payPal = client()
-  if (!payPal) return NextResponse.json({ error: 'PayPal not configured' }, { status: 500 })
-
   try {
+    const token = await getAccessToken()
+    if (!token) return NextResponse.json({ error: 'PayPal not configured' }, { status: 500 })
     const { value, currency_code = 'USD' } = await req.json()
-    const request = new paypal.orders.OrdersCreateRequest()
-    request.headers['prefer'] = 'return=representation'
-    request.requestBody({
-      intent: 'CAPTURE',
-      purchase_units: [
-        { amount: { value: String(value), currency_code } },
-      ],
+    const base = process.env.NODE_ENV === 'production' ? 'https://api.paypal.com' : 'https://api-m.sandbox.paypal.com'
+    const res = await fetch(base + '/v2/checkout/orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+        'PayPal-Request-Id': crypto.randomUUID(),
+      },
+      body: JSON.stringify({
+        intent: 'CAPTURE',
+        purchase_units: [{ amount: { value: String(value), currency_code } }],
+      }),
     })
-    const order = await payPal.execute(request)
-    return NextResponse.json(order.result)
+    const json = await res.json()
+    if (!res.ok) return NextResponse.json({ error: 'PayPal error', detail: json }, { status: 500 })
+    return NextResponse.json(json)
   } catch (e) {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
   }
