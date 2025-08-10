@@ -9,7 +9,7 @@ import { Image as ImageIcon, Filter, Star, Play, X } from 'lucide-react'
 const galleryItems = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=80',
     category: 'Exterior Detail',
     title: 'Luxury SUV Paint Correction',
     description: 'Complete paint correction and ceramic coating application',
@@ -25,7 +25,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1485291571150-772bcfc10c5d?w=800&h=600&fit=crop&q=80',
     category: 'Interior Detail',
     title: 'Premium Leather Restoration',
     description: 'Complete leather cleaning and conditioning',
@@ -57,7 +57,7 @@ const galleryItems = [
   },
   {
     id: 7,
-    image: 'https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?w=800&h=600&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
     category: 'Interior Detail',
     title: 'Luxury Interior Care',
     description: 'Premium interior protection and cleaning',
@@ -96,7 +96,7 @@ const testimonials = [
     service: 'Full Detail',
     rating: 5,
     text: 'The attention to detail is unmatched. Every inch of my car was perfectly cleaned.',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&face&q=80'
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&face&q=80'
   },
   {
     name: 'David Thompson',
