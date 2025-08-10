@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
@@ -68,7 +68,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-export default function BookingPage() {
+function BookingForm() {
   const searchParams = useSearchParams()
   const [selectedDate, setSelectedDate] = useState<Date | null>(null)
   const [selectedTime, setSelectedTime] = useState('')
@@ -456,5 +456,21 @@ export default function BookingPage() {
         </form>
       </div>
     </div>
+  )
+}
+
+export default function BookingPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container max-w-6xl">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Loading...</h1>
+          </div>
+        </div>
+      </div>
+    }>
+      <BookingForm />
+    </Suspense>
   )
 }
