@@ -130,7 +130,7 @@ export default function PricingPage() {
               Transparent <span className="gradient-text">Pricing</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              No hidden fees, no surprises. Choose the perfect package for your vehicle's needs 
+              No hidden fees, no surprises. Choose the perfect package for your vehicle&apos;s needs 
               with confidence in our upfront, competitive pricing.
             </p>
           </motion.div>
@@ -208,7 +208,7 @@ export default function PricingPage() {
                   
                   <CardContent className="space-y-6">
                     <div className="space-y-3">
-                      <h4 className="font-semibold text-green-700">What's Included:</h4>
+                      <h4 className="font-semibold text-green-700">What&apos;s Included:</h4>
                       {tier.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
                           <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />

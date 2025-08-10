@@ -202,7 +202,7 @@ export default function ServicesPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Specialized treatments to address specific needs and enhance your vehicle's appearance.
+              Specialized treatments to address specific needs and enhance your vehicle&apos;s appearance.
             </p>
           </motion.div>
 

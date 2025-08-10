@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Image, Filter, Star, Play, X } from 'lucide-react'
+import { Image as ImageIcon, Filter, Star, Play, X } from 'lucide-react'
 
 const galleryItems = [
   {
@@ -202,7 +202,7 @@ export default function GalleryPage() {
                     )}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <Button size="sm" variant="secondary">
-                        <Image className="w-4 h-4 mr-2" />
+                        <ImageIcon className="w-4 h-4 mr-2" />
                         View Details
                       </Button>
                     </div>
