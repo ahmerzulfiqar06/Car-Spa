@@ -9,14 +9,12 @@ async function getAccessToken() {
   const base = process.env.NODE_ENV === 'production' ? 'https://api.paypal.com' : 'https://api-m.sandbox.paypal.com'
   const res = await fetch(base + '/v1/oauth2/token', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Authorization': 'Basic ' + btoa(`${clientId}:${clientSecret}`)
+    },
     body: 'grant_type=client_credentials',
-    // @ts-ignore
-    cf: { cacheTtl: 0 },
-  }, {
-    // @ts-ignore: next edge runtime fetch init
-    headers: { Authorization: 'Basic ' + Buffer.from(`${clientId}:${clientSecret}`).toString('base64') },
-  } as any)
+  })
   if (!res.ok) return null
   const json = await res.json()
   return json.access_token as string
