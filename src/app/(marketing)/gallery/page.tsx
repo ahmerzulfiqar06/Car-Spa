@@ -25,7 +25,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1485291571150-772bcfc10c5d?w=800&h=600&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
     category: 'Interior Detail',
     title: 'Premium Leather Restoration',
     description: 'Complete leather cleaning and conditioning',
