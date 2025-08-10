@@ -26,7 +26,8 @@ export function HeroSection() {
         <div className="w-24 h-24 bg-pink-400 rounded-full blur-3xl opacity-30"></div>
       </div>
 
-      <div className="container relative z-10 grid gap-10 lg:grid-cols-2 items-center">
+      <div className="container relative z-10 px-4 sm:px-6">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -47,7 +48,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight"
           >
             <span className="block">Precision Detailing</span>
             <span className="block gradient-text">Extraordinary Results</span>
@@ -57,7 +58,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0"
           >
             Experience automotive perfection with our award-winning detailing services. 
             From precision paint correction to premium ceramic protection, we deliver results that exceed expectations.
@@ -67,7 +68,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-4 sm:px-0"
           >
             <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8">
               <Link href={"/booking" as Route}>
@@ -85,7 +86,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="mt-12 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0"
+            className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-sm sm:max-w-lg mx-auto lg:mx-0"
           >
             <div className="text-center lg:text-left">
               <div className="flex items-center gap-2 justify-center lg:justify-start mb-1">
@@ -115,17 +116,33 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
+          className="relative order-first lg:order-last"
         >
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 relative">
-              {/* Placeholder for car image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-white/20 text-center">
-                  <svg className="w-64 h-64 mx-auto" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M5,11L6.5,6.5H17.5L19,11M17.5,16A1.5,1.5 0 0,1 16,14.5A1.5,1.5 0 0,1 17.5,13A1.5,1.5 0 0,1 19,14.5A1.5,1.5 0 0,1 17.5,16M6.5,16A1.5,1.5 0 0,1 5,14.5A1.5,1.5 0 0,1 6.5,13A1.5,1.5 0 0,1 8,14.5A1.5,1.5 0 0,1 6.5,16M18.92,6C18.72,5.42 18.16,5 17.5,5H6.5C5.84,5 5.28,5.42 5.08,6L3,12V20A1,1 0 0,0 4,21H5A1,1 0 0,0 6,20V19H18V20A1,1 0 0,0 19,21H20A1,1 0 0,0 21,20V12L18.92,6Z" />
-                  </svg>
-                  <p className="mt-4 text-xl font-medium">Premium Car Detailing</p>
+            <div className="aspect-[4/3] relative">
+              {/* Real car image */}
+              <img
+                src="https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80"
+                alt="Luxury car detailing showcase"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              
+              {/* Stats overlay */}
+              <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-xl p-4 text-white">
+                <div className="flex items-center justify-between text-sm">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span>Available Today</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                    <span className="ml-1 text-xs">2,500+ Happy Customers</span>
+                  </div>
                 </div>
               </div>
               
@@ -161,6 +178,7 @@ export function HeroSection() {
             <p className="text-xs text-muted-foreground mt-1">2,500+ Happy Customers</p>
           </motion.div>
         </motion.div>
+        </div>
       </div>
     </section>
   )
