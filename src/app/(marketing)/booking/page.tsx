@@ -5,14 +5,43 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { format, addDays, isSameDay, isWeekend } from 'date-fns'
+// import { format, addDays, isSameDay, isWeekend } from 'date-fns'
+
+// Temporary date utilities until date-fns is available
+const format = (date: Date, formatStr: string) => {
+  if (formatStr === 'yyyy-MM-dd') {
+    return date.toISOString().split('T')[0]
+  }
+  if (formatStr === 'MMM dd, yyyy') {
+    return date.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' })
+  }
+  if (formatStr === 'd') {
+    return date.getDate().toString()
+  }
+  return date.toLocaleDateString()
+}
+
+const addDays = (date: Date, days: number) => {
+  const result = new Date(date)
+  result.setDate(result.getDate() + days)
+  return result
+}
+
+const isSameDay = (date1: Date, date2: Date) => {
+  return date1.toDateString() === date2.toDateString()
+}
+
+const isWeekend = (date: Date) => {
+  const day = date.getDay()
+  return day === 0 || day === 6
+}
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Calendar, Clock, Car, User, Mail, Phone, CreditCard, CheckCircle } from 'lucide-react'
-import { loadStripe } from '@stripe/stripe-js'
-import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js'
+// import { loadStripe } from '@stripe/stripe-js'
+// import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js'
 
 const services = {
   basic: { name: 'Express Wash', price: 29, duration: '30 min' },
