@@ -1,0 +1,9 @@
+name = "auto-spa-pages"
+# Ensure Node compatibility APIs are available for Next on Pages runtime
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# pages projects ignore most vars here in favor of Pages UI, but keeping as doc
+
+
