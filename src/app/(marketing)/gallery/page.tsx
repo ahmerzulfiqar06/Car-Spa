@@ -9,7 +9,7 @@ import { Image as ImageIcon, Filter, Star, Play, X } from 'lucide-react'
 const galleryItems = [
   {
     id: 1,
-    image: 'https://picsum.photos/800/600?random=21',
+    image: 'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
     category: 'Exterior Detail',
     title: 'Luxury SUV Paint Correction',
     description: 'Complete paint correction and ceramic coating application',
@@ -17,7 +17,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: 'https://picsum.photos/800/600?random=22',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&q=80',
     category: 'Ceramic Coating',
     title: 'Sports Car Ceramic Protection',
     description: '9H ceramic coating with 5-year warranty',
@@ -25,7 +25,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: 'https://picsum.photos/800/600?random=23',
+    image: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
     category: 'Interior Detail',
     title: 'Premium Leather Restoration',
     description: 'Complete leather cleaning and conditioning',
@@ -33,7 +33,7 @@ const galleryItems = [
   },
   {
     id: 4,
-    image: 'https://picsum.photos/800/600?random=24',
+    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80',
     category: 'Paint Correction',
     title: 'Classic Car Restoration',
     description: 'Multi-stage paint correction process',
@@ -41,7 +41,7 @@ const galleryItems = [
   },
   {
     id: 5,
-    image: 'https://picsum.photos/800/600?random=25',
+    image: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=80',
     category: 'Exterior Detail',
     title: 'Vintage Car Detailing',
     description: 'Meticulous attention to classic details',
@@ -49,7 +49,7 @@ const galleryItems = [
   },
   {
     id: 6,
-    image: 'https://picsum.photos/800/600?random=26',
+    image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop&q=80',
     category: 'Full Detail',
     title: 'Complete Vehicle Transformation',
     description: 'Inside and out premium detailing service',
@@ -57,7 +57,7 @@ const galleryItems = [
   },
   {
     id: 7,
-    image: 'https://picsum.photos/800/600?random=27',
+    image: 'https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?w=800&h=600&fit=crop&q=80',
     category: 'Interior Detail',
     title: 'Luxury Interior Care',
     description: 'Premium interior protection and cleaning',
@@ -65,7 +65,7 @@ const galleryItems = [
   },
   {
     id: 8,
-    image: 'https://picsum.photos/800/600?random=28',
+    image: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&h=600&fit=crop&q=80',
     category: 'Ceramic Coating',
     title: 'Showroom Finish',
     description: 'Mirror-like ceramic coating finish',
@@ -73,7 +73,7 @@ const galleryItems = [
   },
   {
     id: 9,
-    image: 'https://picsum.photos/800/600?random=29',
+    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&q=80',
     category: 'Paint Correction',
     title: 'Scratch & Swirl Removal',
     description: 'Professional paint correction techniques',
@@ -89,21 +89,21 @@ const testimonials = [
     service: 'Ceramic Coating',
     rating: 5,
     text: 'Absolutely incredible work! My car looks better than when I first bought it.',
-    image: 'https://picsum.photos/100/100?random=31'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&face&q=80'
   },
   {
     name: 'Sarah Chen',
     service: 'Full Detail',
     rating: 5,
     text: 'The attention to detail is unmatched. Every inch of my car was perfectly cleaned.',
-    image: 'https://picsum.photos/100/100?random=32'
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&face&q=80'
   },
   {
     name: 'David Thompson',
     service: 'Paint Correction',
     rating: 5,
     text: 'They removed scratches I thought were permanent. True professionals!',
-    image: 'https://picsum.photos/100/100?random=33'
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&face&q=80'
   }
 ]
 

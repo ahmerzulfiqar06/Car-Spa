@@ -11,40 +11,40 @@ const galleryItems = [
   {
     id: 1,
     title: 'BMW M4 - Ceramic Coating',
-    before: 'https://picsum.photos/800/600?random=41',
-    after: 'https://picsum.photos/800/600?random=42',
+    before: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
     service: 'Ceramic Coating'
   },
   {
     id: 2,
     title: 'Mercedes S-Class - Full Detail',
-    before: 'https://picsum.photos/800/600?random=43',
-    after: 'https://picsum.photos/800/600?random=44',
+    before: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&q=80',
     service: 'Premium Detail'
   },
   {
     id: 3,
     title: 'Audi RS7 - Paint Correction',
-    before: 'https://picsum.photos/800/600?random=45',
-    after: 'https://picsum.photos/800/600?random=46',
+    before: 'https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
     service: 'Paint Correction'
   },
   {
     id: 4,
     title: 'Tesla Model X - Interior Detail',
-    before: 'https://picsum.photos/800/600?random=47',
-    after: 'https://picsum.photos/800/600?random=48',
+    before: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop&q=80',
     service: 'Interior Detail'
   }
 ]
 
 const showcaseImages = [
-  'https://picsum.photos/800/600?random=1',
-  'https://picsum.photos/800/600?random=2',
-  'https://picsum.photos/800/600?random=3',
-  'https://picsum.photos/800/600?random=4',
-  'https://picsum.photos/800/600?random=5',
-  'https://picsum.photos/800/600?random=6'
+  'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop&q=80'
 ]
 
 export function GallerySection() {
