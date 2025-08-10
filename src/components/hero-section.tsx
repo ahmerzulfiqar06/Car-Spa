@@ -122,7 +122,7 @@ export function HeroSection() {
             <div className="aspect-[4/3] relative">
               {/* Real car image */}
               <img
-                src="https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&h=600&fit=crop&q=80"
                 alt="Luxury car detailing showcase"
                 className="w-full h-full object-cover"
               />

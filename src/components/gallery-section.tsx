@@ -11,40 +11,40 @@ const galleryItems = [
   {
     id: 1,
     title: 'BMW M4 - Ceramic Coating',
-    before: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=60',
-    after: 'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
+    before: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop&q=80',
     service: 'Ceramic Coating'
   },
   {
     id: 2,
     title: 'Mercedes S-Class - Full Detail',
-    before: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&h=600&fit=crop&q=60',
-    after: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&q=80',
+    before: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&h=600&fit=crop&q=80',
     service: 'Premium Detail'
   },
   {
     id: 3,
     title: 'Audi RS7 - Paint Correction',
-    before: 'https://images.unsplash.com/photo-1486496572940-2bb2341fdbdf?w=800&h=600&fit=crop&q=60',
-    after: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
+    before: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&h=600&fit=crop&q=80',
     service: 'Paint Correction'
   },
   {
     id: 4,
     title: 'Tesla Model X - Interior Detail',
-    before: 'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=60',
-    after: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop&q=80',
+    before: 'https://images.unsplash.com/photo-1619641805634-b867f535071c?w=800&h=600&fit=crop&q=60',
+    after: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&h=600&fit=crop&q=80',
     service: 'Interior Detail'
   }
 ]
 
 const showcaseImages = [
-  'https://images.unsplash.com/photo-1549317336-206569e8475c?w=800&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&h=600&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=600&fit=crop&q=80'
+  'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&h=600&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop&q=80'
 ]
 
 export function GallerySection() {
