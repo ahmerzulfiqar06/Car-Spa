@@ -12,10 +12,10 @@ export function Footer() {
         </div>
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <div className="text-sm font-medium">Company</div>
+            <div className="text-sm font-medium">Quick Links</div>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/careers">Careers</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
