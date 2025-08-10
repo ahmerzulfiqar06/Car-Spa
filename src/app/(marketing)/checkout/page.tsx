@@ -24,17 +24,24 @@ export default function CheckoutPage() {
   const handleStripe = async () => {
     setLoading('stripe')
     try {
-      const res = await fetch('/api/payments/stripe', {
+      const res = await fetch('/api/payments/stripe-checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount, currency: 'usd' }),
+        body: JSON.stringify({ price: amount, service }),
       })
-      const { clientSecret, error } = await res.json()
-      if (error) throw new Error(error)
+      const json = await res.json()
+      if (json.error) throw new Error(json.error)
       const stripe = await loadStripe('pk_test_12345')
       if (!stripe) throw new Error('Stripe failed to load')
-      // In a real flow, render Payment Element or redirect to Checkout; simplified here
-      alert('Stripe PaymentIntent created. Implement client payment flow next.')
+      if (json.url) {
+        window.location.href = json.url
+      } else if (json.id) {
+        // Some environments return the session id rather than url
+        const { error } = await stripe.redirectToCheckout({ sessionId: json.id })
+        if (error) throw error
+      } else {
+        alert('Stripe session created. Redirecting...')
+      }
     } catch (e) {
       alert('Stripe error. Check configuration.')
     } finally {
@@ -84,7 +91,14 @@ export default function CheckoutPage() {
                 return json.id
               }}
               onApprove={async (data) => {
-                alert('PayPal order approved: ' + data.orderID)
+                const r = await fetch('/api/payments/paypal/capture', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ orderId: data.orderID }),
+                })
+                const json = await r.json()
+                if (json.error) alert('PayPal capture failed')
+                else alert('PayPal payment captured!')
               }}
             />
           </div>

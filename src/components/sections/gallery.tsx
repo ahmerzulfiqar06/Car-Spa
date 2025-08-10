@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { BeforeAfter } from '@/components/before-after'
 
 const images = [
   'https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1600&auto=format&fit=crop',
@@ -22,6 +23,16 @@ export function GallerySection() {
             <Image src={src} alt="Car detail" fill className="object-cover" unoptimized />
           </div>
         ))}
+      </div>
+      <div className="mt-10">
+        <h3 className="text-xl font-semibold">Before / After</h3>
+        <p className="text-sm text-muted-foreground">Slide to reveal the transformation.</p>
+        <div className="mt-4">
+          <BeforeAfter
+            before="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop"
+            after="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&w=1600&auto=format&fit=crop"
+          />
+        </div>
       </div>
     </section>
   )

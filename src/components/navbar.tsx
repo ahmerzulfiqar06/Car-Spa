@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+import { MobileNav } from '@/components/mobile-nav'
 import type { Route } from 'next'
 
 const nav = [
@@ -40,6 +41,7 @@ export function Navbar() {
             <Link href={"/booking" as Route}>Book now</Link>
           </Button>
         </div>
+        <MobileNav />
       </div>
     </header>
   )
