@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import type { Route } from 'next'
 
 export default function HomePage() {
   return (
@@ -26,10 +27,10 @@ export default function HomePage() {
           </motion.p>
           <div className="mt-8 flex gap-3">
             <Button asChild size="lg">
-              <Link href="/booking">Book now</Link>
+              <Link href={"/booking" as Route}>Book now</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/services">Explore services</Link>
+              <Link href={"/services" as Route}>Explore services</Link>
             </Button>
           </div>
         </div>

@@ -3,13 +3,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
+import type { Route } from 'next'
 
 const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/' as Route, label: 'Home' },
+  { href: '/services' as Route, label: 'Services' },
+  { href: '/pricing' as Route, label: 'Pricing' },
+  { href: '/gallery' as Route, label: 'Gallery' },
+  { href: '/contact' as Route, label: 'Contact' },
 ]
 
 export function Navbar() {
@@ -36,7 +37,7 @@ export function Navbar() {
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild size="sm">
-            <Link href="/booking">Book now</Link>
+            <Link href={"/booking" as Route}>Book now</Link>
           </Button>
         </div>
       </div>
