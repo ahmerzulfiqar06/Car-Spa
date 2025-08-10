@@ -11,40 +11,40 @@ const galleryItems = [
   {
     id: 1,
     title: 'BMW M4 - Ceramic Coating',
-    before: 'https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=800&q=80',
-    after: 'https://images.unsplash.com/photo-1555215858-9dc80a29024b?w=800&q=80',
+    before: 'https://picsum.photos/800/600?random=41',
+    after: 'https://picsum.photos/800/600?random=42',
     service: 'Ceramic Coating'
   },
   {
     id: 2,
     title: 'Mercedes S-Class - Full Detail',
-    before: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80',
-    after: 'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80',
+    before: 'https://picsum.photos/800/600?random=43',
+    after: 'https://picsum.photos/800/600?random=44',
     service: 'Premium Detail'
   },
   {
     id: 3,
     title: 'Audi RS7 - Paint Correction',
-    before: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80',
-    after: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&q=80',
+    before: 'https://picsum.photos/800/600?random=45',
+    after: 'https://picsum.photos/800/600?random=46',
     service: 'Paint Correction'
   },
   {
     id: 4,
     title: 'Tesla Model X - Interior Detail',
-    before: 'https://images.unsplash.com/photo-1619641805634-b867f535071c?w=800&q=80',
-    after: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80',
+    before: 'https://picsum.photos/800/600?random=47',
+    after: 'https://picsum.photos/800/600?random=48',
     service: 'Interior Detail'
   }
 ]
 
 const showcaseImages = [
-  'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80',
-  'https://images.unsplash.com/photo-1544829099-b9a0c5303bea?w=800&q=80',
-  'https://images.unsplash.com/photo-1580414922060-b8b8dc4b7ad2?w=800&q=80',
-  'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80',
-  'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80',
-  'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80'
+  'https://picsum.photos/800/600?random=1',
+  'https://picsum.photos/800/600?random=2',
+  'https://picsum.photos/800/600?random=3',
+  'https://picsum.photos/800/600?random=4',
+  'https://picsum.photos/800/600?random=5',
+  'https://picsum.photos/800/600?random=6'
 ]
 
 export function GallerySection() {
